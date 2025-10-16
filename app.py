@@ -40,7 +40,7 @@ def escolher_opcao():
 def main():
     exibir_nome_do_programa()
     exibir_opcoes()
-    escolher_opcao()4
+    escolher_opcao()
 
 
 if __name__ == '__main__':
