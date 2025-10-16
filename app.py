@@ -8,10 +8,10 @@ print('''
 ''')
 
 #menu de escolha inicial
-print('1. Cadastrar restaurante')
-print('2. Listar restaurante')
-print('3. Ativar restaurante')
-print('4. Sair\n')
+print('1 - Cadastrar restaurante')
+print('2 - Listar restaurante')
+print('3 - Ativar restaurante')
+print('4 - Sair\n')
 
 #escolha do menu inicial
 opcao_escolhida = int(input('Escolha uma opção: '))
