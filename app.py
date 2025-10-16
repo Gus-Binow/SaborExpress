@@ -14,7 +14,9 @@ print('3. Ativar restaurante')
 print('4. Sair\n')
 
 #escolha do menu inicial
-opcao_escolhida = input('Escolha uma opção: ')
+opcao_escolhida = int(input('Escolha uma opção: '))
+# opcao_escolhida = int(opcao_escolhida) // outra opção em relação a linha de cima
+
 print(f'Você escolheu a opção {opcao_escolhida}')
 
 if opcao_escolhida == 1:
