@@ -29,13 +29,30 @@ def escolher_opcao():
     #opcao_escolhida = int(opcao_escolhida) || outra opção em relação a linha de cima
 
     if opcao_escolhida == 1:
-        print('Cadastrar Restaurante')
+        print('Cadastrar restaurante')
     elif opcao_escolhida == 2:
-        print('Listar Restaurante')
+        print('Listar restaurante')
     elif opcao_escolhida == 3:
-        print('Ativar Restaurante:')
+        print('Ativar restaurante:')
     else:
         finalizar_app()
+
+
+#alternativo de código no lugar de il elif else
+'''
+def escolher_opcao():
+opcao_escolhida = int(input('Escolha uma opção: '))
+
+match opcao_escolhida:
+    case 1:
+        print('Cadastrar restaurante')
+    case 2:
+        print('Listar restaurante')
+    case 3:
+        print('Ativar restaurante')
+    case _:
+        finalizar_app()
+'''
 
 def main():
     exibir_nome_do_programa()
