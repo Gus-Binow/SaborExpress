@@ -31,6 +31,7 @@ def opcao_invalida():
     input('Digite uma tecla para voltar ao menu principal  ')
     main()
 
+#cadastro de novos restaurantes
 def cadastrar_novo_restaurante():
     os.system('cls')
     print('Cadastro de novo restaurante')
