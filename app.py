@@ -2,7 +2,7 @@ import os
 
 restaurantes = ['Pizza', 'Sushi']
 
-
+#"logo" do aplicativo
 def exibir_nome_do_programa():
     print('''
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
@@ -22,35 +22,43 @@ def exibir_opcoes():
 
 #encerrar o app
 def finalizar_app():
-    os.system('cls')
-    #os.system('clear') no mac
-    print('Finalizando o programa\n')
+    exibir_subtitulo('Finalizando o programa')
 
+#o que voltar ao usuário caso a opção seja invalida
 def opcao_invalida():
     print('Opção invalida!')
-    input('Digite uma tecla para voltar ao menu principal  ')
+    voltar_ao_menu()
+
+#limpar o prompt e exibir a opção
+def exibir_subtitulo(texto):
+    os.system('cls')
+    #os.system('clear') no mac
+    print(texto)
+    print()
+
+#voltar ao menu inicial onde se exibe as opções
+def voltar_ao_menu():
+    input('\nDigite uma tecla para voltar ao menu principal  ')
     main()
 
 #cadastro de novos restaurantes
 def cadastrar_novo_restaurante():
-    os.system('cls')
-    print('Cadastro de novo restaurante')
+    exibir_subtitulo('Cadastro de novo restaurante')
+
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     restaurantes.append(nome_do_restaurante)
     print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!')
 
-    input('\nDigite uma tecla para voltar ao menu principal')
-    main()
+    voltar_ao_menu()
 
+#listagem de novos restaurantes
 def listar_restaurante():
-    os.system('cls')
-    print('Listando os restaurantes:\n')
+    exibir_subtitulo('Listando os restaurantes:')
 
-    for restaurante in restaurantes:
-        print(f'.{restaurante}')
+    for indice, restaurante in enumerate(restaurantes):
+        print(f'{indice + 1} - {restaurante}')
 
-    input('\nDigite uma tecla para voltar ao menu principal')
-    main()
+    voltar_ao_menu()
 
 #escolha uma opção
 def escolher_opcao():
