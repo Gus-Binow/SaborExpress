@@ -1,17 +1,17 @@
-#Solicite ao usuário um número e, em seguida, utilize um loop for para imprimir a tabuada desse número, indo de 1 a 10.
+#Utilize um loop for para imprimir os números de 1 a 10 em ordem decrescente.
 import os 
 os.system('cls')
 
-tabuada = int(input('Digite um número para ver a tabuada: '))
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+indice = 10
 
-i = 1
-numero = 0
-lista = []
+for numero in numeros[::-1]:
+    print(numero)
 
-print(f'A tabuada do {tabuada} é:')
-    
-while i <= 10:
-    numero = tabuada * i
-    lista.append(numero)
-    print(f'{tabuada} * {i} = {numero}')
-    i += 1
+#usando a função reversed
+'''
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for numero in reversed(numeros):
+    print(numero)
+'''
