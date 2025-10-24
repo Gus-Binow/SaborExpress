@@ -1,22 +1,20 @@
-#Crie uma lista de números e utilize um loop for para calcular a soma de todos os elementos.
-#Utilize um bloco try-except para lidar com possíveis exceções.
+# Construa um código que calcule a média dos valores em uma lista. 
+# Utilize um bloco try-except para lidar com a divisão por zero, caso a lista esteja vazia.
+
 import os 
 os.system('cls')
 
-numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 soma = 0
-
-def opcao_invalida():
-    print('Opção invalida!')
-
+media = 0
 
 try:
-    for numero in numeros:
-        if numero >= 0:
-            soma += numero
-        else:
-            pass
-    print(f'O valor da soma é: {soma}')
+    for i in lista:
+        soma += i
+    media = soma / len(lista)
 
-except: opcao_invalida()
-
+except ZeroDivisionError:
+    print('A lista está vazia e não existe divisão por 0')
+    
+print('A soma dos elementos da lista é', soma)
+print(f'A média dos elementos da lista é {media}')

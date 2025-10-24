@@ -8,6 +8,7 @@ i = 1
 numero = 0
 lista = []
 
+print()
 print(f'A tabuada do {tabuada} é:')
     
 while i <= 10:
@@ -15,3 +16,4 @@ while i <= 10:
     lista.append(numero)
     print(f'{tabuada} * {i} = {numero}')
     i += 1
+print()
