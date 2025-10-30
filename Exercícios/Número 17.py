@@ -33,6 +33,13 @@ def adicionar_item_dict(): #adiconar itens ao dicionário
     nova_chave = input(f'Digite a {chave} que deseja gravar no novo item: ')
     meu_dict[chave] = nova_chave       
 
+def adicionar_outro_item(): #adicionar mais um item ao dicionário
+    imprimir_novo_dict()
+    novo_item = int(input('Escolha: '))
+    while novo_item == 1:
+        adicionar_item_dict()
+        print('Desejar adicionar outro item ao dicionário?')
+        novo_item = int(input('Escolha: '))
 
 imprimir_alteração_dict()
 alterar_item= int(input('Escolha: '))
@@ -51,20 +58,21 @@ else:
 print('-' * 50)
 print()
 
-
 imprimir_novo_dict()
 nova_escolha = int(input('Escolha: '))
 
 #adiconando novo item ao dicionário
 if nova_escolha == 1:
     adicionar_item_dict()
-    print('Encerrando o programa e imprimindo o dicionário...\n')
+    print()
     
 elif nova_escolha == 2:
     print('Encerrando o programa e imprimindo o dicionário...\n')
 
 else:
     print('Opção inválida!\n')
+
+adicionar_outro_item()
 
 #imprimindo o dicionário
 for i, (chave, valor) in enumerate(meu_dict.items()):
