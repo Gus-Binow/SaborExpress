@@ -6,7 +6,7 @@ restaurantes = [{'nome' : 'Praça', 'categoria' : 'Japonesa', 'ativo' : False},
 ]
 
 #"logo" do aplicativo
-def exibir_nome_do_programa():
+def exibir_nome_do_programa(): 
     print('''
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -17,23 +17,23 @@ def exibir_nome_do_programa():
 ''')
 
 #menu de escolha inicial
-def exibir_opcoes():
+def exibir_opcoes(): 
     print('1 - Cadastrar restaurante')
     print('2 - Listar restaurante')
     print('3 - Alternar estado do restaurante')
     print('4 - Sair\n')
 
 #encerrar o app
-def finalizar_app():
+def finalizar_app(): 
     exibir_subtitulo('Finalizando o programa')
 
 #o que voltar ao usuário caso a opção seja invalida
-def opcao_invalida():
+def opcao_invalida(): 
     print('Opção invalida!')
     voltar_ao_menu()
 
 #limpar o prompt e exibir a opção
-def exibir_subtitulo(texto):
+def exibir_subtitulo(texto): 
     os.system('cls') #os.system('clear') no mac
     linha = '*' * (len(texto) + 4)
     print (linha)
@@ -42,12 +42,20 @@ def exibir_subtitulo(texto):
     print()
 
 #voltar ao menu inicial onde se exibe as opções
-def voltar_ao_menu():
+def voltar_ao_menu(): 
     input('\nDigite uma tecla para voltar ao menu principal  ')
     main()
 
 #cadastro de novos restaurantes
-def cadastrar_novo_restaurante():
+def cadastrar_novo_restaurante(): 
+    ''' 
+    Inputs:
+    - Nome do restaurante
+    - Categoria
+
+    Outputs:
+    - Adiciona um novo restaurante a lista de restaurantes
+    '''
     exibir_subtitulo('Cadastro de novo restaurante')
 
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
@@ -73,6 +81,11 @@ def listar_restaurante():
     
 #ativação dos restaurantes cadastrados, já que eles vem por convenção desativados
 def altenar_estado_do_restaurante():
+    ''' Altera o estado ativo/desativado de um restaurante    
+    #
+    # Outputs:
+    #- Exibe mensagem indicando o sucesso da operação
+    '''
     exibir_subtitulo('Alternando estado do restaurante')
     nome_restaurante = input('Digite o nome do restauranta que deseja alterar o estado: ')
     restaurante_encontrado = False
@@ -109,9 +122,7 @@ def escolher_opcao():
     except:
         opcao_invalida()
 
-
-#alternativo de código no lugar de il elif else
-'''
+'''alternativo de código no lugar de il elif else
 def escolher_opcao():
 opcao_escolhida = int(input('Escolha uma opção: '))
 

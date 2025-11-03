@@ -7,7 +7,12 @@ os.system('cls')
 
 #dicionário
 meu_dict = {'Nome': 'Gustavo', 'Idade': 24, 'Cidade': 'Alegre'}
+
 #versão interativa do código
+def imprimir_alteração_dict(): #imprimir as opções
+    print('Deseja alterar algum item do dicionário?')
+    print('Digite 1 para SIM')
+    print('Digite 2 para NÃO')
 
 def alterar_item_dicionario(): #alteração dos itens do dicionário
     chave = input('\nDigite o item que você deseja alterar? (Nome, Idade, Cidade): ')
@@ -17,11 +22,6 @@ def alterar_item_dicionario(): #alteração dos itens do dicionário
         print("Item alterado com sucesso!\n")
     else:
             print("Essa item não existe no dicionário.\n")
-
-def imprimir_alteração_dict(): #imprimir as opções
-    print('Deseja alterar algum item do dicionário?')
-    print('Digite 1 para SIM')
-    print('Digite 2 para NÃO')
 
 def imprimir_novo_dict(): #imprimir as opções
     print('Deseja adiconar um novo item ao dicionário?')
@@ -40,6 +40,7 @@ def adicionar_outro_item(): #adicionar mais um item ao dicionário
         adicionar_item_dict()
         print('Desejar adicionar outro item ao dicionário?')
         novo_item = int(input('Escolha: '))
+#------------------------------------------------------------------#
 
 imprimir_alteração_dict()
 alterar_item= int(input('Escolha: '))
@@ -80,8 +81,8 @@ for i, (chave, valor) in enumerate(meu_dict.items()):
     print('--------------------------')
 
 
-#versão estática do código
-'''
+'''versão estática do código
+
 #alterando idade
 meu_dict['Idade'] = 25
 
